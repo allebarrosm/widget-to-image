@@ -108,7 +108,7 @@ class MainPageState extends State<MainPage> {
         ),
       );
   Future<void> getBytes() async {
-    final bytes = await controller.capture();
+    final bytes = await controller.capture(MediaQuery.of(context).devicePixelRatio);
     setState(() {
       this.bytes = bytes;
     });
